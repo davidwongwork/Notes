@@ -1,7 +1,8 @@
 # Lambdas, Functional
 
 ## Integrating with Java lambdas
-Here is an example of an implicit conversation from a Java lambda that takes a parameter of type `T` and returns `void` to a Scala function of the same signature (`T => Unit`). The Scala function that is return simply takes an instance of type `T` and calls the `accept` method of the Java `Consumer` lambda.
+Here is an example of an implicit conversation from a Java lambda that takes a parameter of type `T` and returns `void` to a Scala function of the same signature (`T => Unit`).
+The Scala function that is returned simply takes an instance of type `T` and calls the `accept` method of the Java `Consumer` lambda.
 ```scala
 implicit private def j2sLambda(f: java.util.function.Consumer[T]): T => Unit =
   (t: T) => f.accept(t)
