@@ -12,7 +12,7 @@ git checkout [a branch name]
 
 ## Managing branches
 
-### Delete a Remote branch
+### Delete a Remote branch or Tag
 ```shell
 git push -d [REMOTE] [BRANCH]
 ```
@@ -27,3 +27,36 @@ A shortcut to specify both `--delete` and `--force` is to use a capital D.
 git branch -D [BRANCH]
 ```
 
+### Delete a Local Tag
+```shell
+git tag --delete [TAG]
+```
+
+## Managing Remotes
+
+### Adding a remote
+```shell
+git remote add [REMOTE NAME] [URL]
+```
+
+### Renaming a remote
+```shell
+git remote rename [OLD NAME] [NEW NAME]
+```
+
+## Using stash
+
+### stash all changes
+```shell
+git stash
+```
+
+### listing your stashes
+```shell
+git stash list
+```
+
+### show a diff of a stash
+```shell
+git stash show -p stash@{0}
+```
