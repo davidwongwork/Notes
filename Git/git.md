@@ -12,6 +12,11 @@ git checkout [a branch name]
 
 ## Managing branches
 
+### Renaming a branch
+```shell
+git branch -m [NEW NAME]
+```
+
 ### Delete a Remote branch or Tag
 ```shell
 git push -d [REMOTE] [BRANCH]
