@@ -10,7 +10,12 @@ And then you can checkout that branch
 git checkout [a branch name]
 ```
 
-## Managing branches
+And you can get updates from that pull request
+```shell
+git pull upstream pull/[pull ID]]/head
+```
+
+## Managing branches, tags
 
 ### Renaming a branch
 ```shell
@@ -39,6 +44,11 @@ git tag --delete [TAG]
 
 ## Managing Remotes
 
+### Show remotes
+```shell
+git remote -vv
+```
+
 ### Adding a remote
 ```shell
 git remote add [REMOTE NAME] [URL]
@@ -47,6 +57,11 @@ git remote add [REMOTE NAME] [URL]
 ### Renaming a remote
 ```shell
 git remote rename [OLD NAME] [NEW NAME]
+```
+
+### Changing a remote's location
+```shell
+git remote set-url [REMOTE NAME] [URL]
 ```
 
 ## Using stash
